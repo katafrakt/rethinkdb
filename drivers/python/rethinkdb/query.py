@@ -6,7 +6,7 @@ __all__ = [
     'asc', 'desc',
     'db', 'db_create', 'db_drop', 'db_list',
     'table', 'table_create', 'table_drop', 'table_list',
-    'wait', 'reconfigure', 'rebalance',
+    'wait', 'reconfigure', 'rebalance', 'grant',
     'eq', 'ne', 'le', 'ge', 'lt', 'gt', 'and_', 'or_', 'not_',
     'add', 'sub', 'mul', 'div', 'mod', 'floor', 'ceil', 'round',
     'time', 'iso8601', 'epoch_time', 'now', 'make_timezone',
@@ -105,6 +105,10 @@ def reconfigure(*args, **kwargs):
 
 def rebalance(*args, **kwargs):
     return ast.RebalanceTL(*args, **kwargs)
+
+
+def grant(*args, **kwargs):
+    return ast.GrantTL(*args, **kwargs)
 
 
 def branch(*args):
